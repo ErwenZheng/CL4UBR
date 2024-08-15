@@ -1,5 +1,5 @@
 # Cross-View and Spatial-Temporal Contrastive Learning for User Behavior Representation in Online Food Ordering Services
-This code is the official implementation of "CLUBR: Contrastive Learning for User Behavior Representation in Online Food Ordering Services".
+This code is the official implementation of "Cross-View and Spatial-Temporal Contrastive Learning for User Behavior Representation in Online Food Ordering Services".
 
 ## Requirements
 - python >= 3.6
