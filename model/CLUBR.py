@@ -6,10 +6,10 @@ from torch.nn.utils.rnn import pack_padded_sequence
 from torch.nn.utils.rnn import pad_packed_sequence
 from utils import *
 
-class CLUBR(nn.Module):
+class CL4UBR(nn.Module):
     def __init__(self, embedding_dim, hidden_dim, i2i, i2t, i2c, i2f, i2a, device, downstream, tau, margin, lam_1, lam_2, delta, shift_init, scale_init, \
                  shop_num, brand_num, user_num, district_num, item_num, category_num, food_num, aoi_num):
-        super(CLUBR,self).__init__()
+        super(CL4UBR,self).__init__()
         self.embedding_dim = embedding_dim
         self.hidden_dim = hidden_dim
         self.device = device
