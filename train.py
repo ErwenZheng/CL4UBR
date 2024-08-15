@@ -3,7 +3,7 @@ import configparser
 import os
 import load_data
 from load_data import CustomDataset
-from model.CLUBR import *
+from model.CL4UBR import *
 from copy import deepcopy
 from utils import *
 from torch.nn.utils import clip_grad_norm_
@@ -99,7 +99,7 @@ dl_test = torch.utils.data.DataLoader(CTR_test_data, batch_size=batch_size, shuf
 # Model setup
 print('Building model...', flush=True)
 # Define model
-model = CLUBR(embedding_dim = emb_size, hidden_dim = hidden_size, i2i=i2i, i2t=i2t, i2c=i2c, i2f=i2f, i2a=i2a, device=device,downstream=downstream,\
+model = CL4UBR(embedding_dim = emb_size, hidden_dim = hidden_size, i2i=i2i, i2t=i2t, i2c=i2c, i2f=i2f, i2a=i2a, device=device,downstream=downstream,\
                 tau = tau,margin=margin, lam_1=lam_1, lam_2=lam_2, delta=delta, shift_init=19.96165667039388, scale_init=20.269409785513076,shop_num=shop_num,brand_num=brand_num,user_num=user_num,\
                 district_num=district_num, item_num=item_num, category_num=category_num, food_num=food_num, aoi_num= aoi_num).to(device)
 print(model, flush=True)
